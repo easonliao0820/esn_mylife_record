@@ -1,0 +1,26 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.wrap {
+  @include page-shell;
+  @include fade-in-up;
+  padding-block: $space-6 $space-4;
+}
+
+.eyebrow {
+  @include label-caps;
+  display: block;
+  margin-bottom: $space-1;
+}
+
+.title {
+  font-size: $fs-h1;
+  color: $color-ink;
+}
+
+.subtitle {
+  margin-top: $space-2;
+  max-width: 42rem;
+  font-size: 1.05rem;
+  color: $color-ink-soft;
+}

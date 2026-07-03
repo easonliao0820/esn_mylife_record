@@ -1,0 +1,44 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.list {
+  @include page-shell;
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+  padding-block: $space-3 $space-7;
+}
+
+.item {
+  padding-bottom: $space-4;
+  border-bottom: 1px solid $color-border;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.itemHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: $space-2;
+  flex-wrap: wrap;
+}
+
+.itemTitle {
+  font-family: $font-heading;
+  font-size: 1.2rem;
+  color: $color-ink;
+}
+
+.itemPeriod {
+  @include label-caps;
+  color: $color-ink-faint;
+  white-space: nowrap;
+}
+
+.itemDesc {
+  margin-top: $space-1;
+  color: $color-ink-soft;
+}

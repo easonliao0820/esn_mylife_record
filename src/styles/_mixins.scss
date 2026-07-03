@@ -1,0 +1,30 @@
+@use 'variables' as *;
+
+@mixin page-shell {
+  max-width: $content-width;
+  margin-inline: auto;
+  padding-inline: $page-padding-inline;
+}
+
+@mixin label-caps {
+  font-family: $font-body;
+  font-size: $fs-label;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $color-ink-faint;
+}
+
+@mixin fade-in-up {
+  animation: fadeInUp $duration-base $ease-standard both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

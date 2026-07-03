@@ -1,0 +1,54 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.back {
+  @include page-shell;
+  display: inline-flex;
+  padding-top: $space-4;
+}
+
+.backLink {
+  @include label-caps;
+  text-decoration: none;
+  color: $color-ink-soft;
+
+  &:hover {
+    color: $color-accent;
+  }
+}
+
+.diagramGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: $space-2;
+  max-width: $content-width-narrow;
+}
+
+.diagramCard {
+  aspect-ratio: 4 / 3;
+  border: 1px dashed $color-border;
+  border-radius: $radius-md;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: $space-2;
+  color: $color-ink-faint;
+  @include label-caps;
+  background: $color-bg-alt;
+}
+
+.linkRow {
+  display: flex;
+  gap: $space-3;
+  flex-wrap: wrap;
+}
+
+.linkItem {
+  @include label-caps;
+}
+
+.notFound {
+  @include page-shell;
+  padding-block: $space-6;
+}

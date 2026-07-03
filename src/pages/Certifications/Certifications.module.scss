@@ -1,0 +1,56 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.certList {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+  max-width: $content-width-narrow;
+}
+
+.certItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: $space-2;
+  padding-block: $space-2;
+  border-bottom: 1px solid $color-border;
+  flex-wrap: wrap;
+}
+
+.certName {
+  font-family: $font-heading;
+  font-size: 1.05rem;
+}
+
+.certMeta {
+  @include label-caps;
+  color: $color-ink-faint;
+  white-space: nowrap;
+}
+
+.skillGroups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: $space-3;
+  max-width: $content-width-narrow;
+}
+
+.skillLabel {
+  @include label-caps;
+  display: block;
+  margin-bottom: $space-1;
+}
+
+.skillTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.skillTag {
+  font-size: $fs-small;
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
+  padding: 0.2rem 0.6rem;
+}

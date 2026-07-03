@@ -1,0 +1,134 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.hero {
+  @include page-shell;
+  min-height: calc(100vh - 4rem - 4.5rem);
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: $space-6;
+  padding-block: $space-6;
+
+  @media (max-width: 860px) {
+    grid-template-columns: 1fr;
+    padding-block: $space-4;
+  }
+}
+
+.textCol {
+  @include fade-in-up;
+}
+
+.eyebrow {
+  @include label-caps;
+  display: block;
+  margin-bottom: $space-2;
+}
+
+.name {
+  font-size: $fs-display;
+  color: $color-ink;
+}
+
+.role {
+  margin-top: $space-2;
+  font-size: 1.1rem;
+  color: $color-ink-soft;
+}
+
+.tagline {
+  margin-top: $space-3;
+  max-width: 34rem;
+  font-size: 1.2rem;
+  color: $color-ink;
+  font-family: $font-heading;
+  font-style: italic;
+}
+
+.actions {
+  display: flex;
+  gap: $space-2;
+  margin-top: $space-4;
+  flex-wrap: wrap;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  @include label-caps;
+  text-decoration: none;
+  padding: 0.85rem 1.5rem;
+  border-radius: $radius-sm;
+  transition:
+    transform $duration-fast $ease-standard,
+    background $duration-fast $ease-standard;
+}
+
+.primaryBtn {
+  background: $color-ink;
+  color: $color-bg;
+
+  &:hover {
+    background: $color-accent;
+    transform: translateY(-1px);
+  }
+}
+
+.secondaryBtn {
+  border: 1px solid $color-border;
+  color: $color-ink;
+
+  &:hover {
+    border-color: $color-accent;
+    color: $color-accent;
+    transform: translateY(-1px);
+  }
+}
+
+.highlights {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+  margin-top: $space-6;
+  padding-top: $space-4;
+  border-top: 1px solid $color-border;
+  max-width: 22rem;
+}
+
+.highlightItem {
+  display: flex;
+  align-items: baseline;
+  gap: $space-2;
+  font-size: $fs-small;
+  color: $color-ink-soft;
+
+  &::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: $color-accent;
+    flex-shrink: 0;
+  }
+}
+
+.photoCol {
+  display: flex;
+  justify-content: center;
+}
+
+.photoFrame {
+  width: 100%;
+  max-width: 22rem;
+  aspect-ratio: 4 / 5;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $color-bg-alt;
+  color: $color-ink-faint;
+  @include label-caps;
+  text-align: center;
+  padding: $space-3;
+}

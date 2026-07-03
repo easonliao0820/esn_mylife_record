@@ -1,0 +1,29 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: $space-3;
+  max-width: $content-width-narrow;
+}
+
+.statLabel {
+  @include label-caps;
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.statValue {
+  font-family: $font-heading;
+  font-size: 1.15rem;
+  color: $color-ink;
+}
+
+.privacyNote {
+  @include page-shell;
+  display: block;
+  padding-bottom: $space-7;
+  font-size: $fs-small;
+  color: $color-ink-faint;
+}

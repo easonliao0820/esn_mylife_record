@@ -1,0 +1,57 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.wrap {
+  @include page-shell;
+  padding-block: $space-4 $space-8;
+  max-width: $content-width-narrow;
+}
+
+.intro {
+  color: $color-ink-soft;
+  margin-bottom: $space-4;
+}
+
+.channels {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+}
+
+.channel {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-block: $space-2;
+  border-bottom: 1px solid $color-border;
+  text-decoration: none;
+  color: $color-ink;
+
+  &:hover {
+    color: $color-accent;
+  }
+}
+
+.channelLabel {
+  @include label-caps;
+  color: $color-ink-faint;
+}
+
+.resumeBtn {
+  @include label-caps;
+  display: inline-block;
+  margin-top: $space-4;
+  padding: 0.85rem 1.5rem;
+  background: $color-ink;
+  color: $color-bg;
+  text-decoration: none;
+  border-radius: $radius-sm;
+  transition:
+    background $duration-fast $ease-standard,
+    transform $duration-fast $ease-standard;
+
+  &:hover {
+    background: $color-accent;
+    transform: translateY(-1px);
+  }
+}

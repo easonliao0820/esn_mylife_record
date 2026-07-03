@@ -1,0 +1,21 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.section {
+  @include page-shell;
+  padding-block: $space-4;
+  border-top: 1px solid $color-border;
+}
+
+.label {
+  @include label-caps;
+  display: block;
+  margin-bottom: $space-2;
+}
+
+.body {
+  max-width: $content-width-narrow;
+  color: $color-ink;
+  font-size: $fs-body;
+  white-space: pre-line;
+}

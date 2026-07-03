@@ -1,0 +1,56 @@
+@use 'variables' as *;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: $color-bg;
+  color: $color-ink;
+  font-family: $font-body;
+  font-size: $fs-body;
+  line-height: 1.6;
+  text-wrap: pretty;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-heading;
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0;
+  text-wrap: pretty;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: $color-accent;
+  text-decoration-color: $color-accent-soft;
+  text-underline-offset: 3px;
+}
+
+button {
+  font-family: inherit;
+}
+
+::selection {
+  background: $color-accent-soft;
+  color: $color-ink;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

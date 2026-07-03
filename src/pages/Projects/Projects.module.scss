@@ -1,0 +1,55 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.grid {
+  @include page-shell;
+  padding-block: $space-4 $space-7;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  gap: $space-3;
+}
+
+.card {
+  display: block;
+  padding: $space-3;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  background: $color-surface;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: $shadow-soft;
+  transition:
+    transform $duration-fast $ease-standard,
+    border-color $duration-fast $ease-standard;
+
+  &:hover {
+    transform: translateY(-3px);
+    border-color: $color-accent;
+  }
+}
+
+.cardName {
+  font-family: $font-heading;
+  font-size: 1.25rem;
+  color: $color-ink;
+}
+
+.cardSummary {
+  margin-top: $space-1;
+  font-size: $fs-small;
+  color: $color-ink-soft;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: $space-2;
+}
+
+.tag {
+  @include label-caps;
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
+  padding: 0.15rem 0.5rem;
+}

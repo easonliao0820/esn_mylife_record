@@ -1,0 +1,99 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.bar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(247, 245, 240, 0.88);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid $color-border;
+}
+
+.inner {
+  @include page-shell;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-3;
+  padding-block: $space-2;
+
+  @media (max-width: 720px) {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: 'brand toggle' 'links links';
+    row-gap: $space-2;
+  }
+}
+
+.brand {
+  grid-area: brand;
+  font-family: $font-heading;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: $color-ink;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.links {
+  grid-area: links;
+  display: flex;
+  align-items: center;
+  gap: clamp(0.75rem, 2vw, 1.75rem);
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  @include label-caps;
+  position: relative;
+  text-decoration: none;
+  color: $color-ink-soft;
+  padding-block: 0.35rem;
+  transition: color $duration-fast $ease-standard;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    height: 1px;
+    background: $color-accent;
+    transition: right $duration-base $ease-standard;
+  }
+
+  &:hover {
+    color: $color-ink;
+  }
+}
+
+.linkActive {
+  color: $color-accent;
+
+  &::after {
+    right: 0;
+  }
+}
+
+.langToggle {
+  grid-area: toggle;
+  @include label-caps;
+  border: 1px solid $color-border;
+  background: transparent;
+  color: $color-ink-soft;
+  border-radius: $radius-sm;
+  padding: 0.35rem 0.75rem;
+  cursor: pointer;
+  transition:
+    border-color $duration-fast $ease-standard,
+    color $duration-fast $ease-standard;
+
+  &:hover {
+    border-color: $color-accent;
+    color: $color-accent;
+  }
+}

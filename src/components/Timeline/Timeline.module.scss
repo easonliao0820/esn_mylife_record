@@ -1,0 +1,38 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: $space-3;
+  max-width: $content-width-narrow;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 9rem 1fr;
+  gap: $space-3;
+  padding-block: $space-1;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+    gap: $space-1;
+  }
+}
+
+.period {
+  @include label-caps;
+  color: $color-ink-faint;
+}
+
+.school {
+  font-family: $font-heading;
+  font-size: 1.1rem;
+  color: $color-ink;
+}
+
+.note {
+  margin-top: 0.15rem;
+  font-size: $fs-small;
+  color: $color-ink-soft;
+}

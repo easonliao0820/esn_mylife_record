@@ -1,0 +1,30 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.main {
+  min-height: calc(100vh - 4rem);
+}
+
+.footer {
+  border-top: 1px solid $color-border;
+  padding-block: $space-3;
+}
+
+.footerInner {
+  @include page-shell;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: $space-1;
+  @include label-caps;
+}
+
+.footerLink {
+  color: $color-ink-soft;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-accent;
+  }
+}
