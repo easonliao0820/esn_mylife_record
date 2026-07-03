@@ -14,7 +14,7 @@ export const zh = {
   home: {
     name: '廖翊丞',
     role: '國立雲林科技大學 二技在學',
-    tagline: '〔一句話定位 — 待補，例如：喜歡把想法做成可以跑起來的東西〕',
+    tagline: '我們寫下的程式，就像是由我們心中的靈魂所煉製而成的咒語。\n——《計算機程序的構造和解釋》',
     highlights: ['〔亮點數字 1，如：多益 750〕', '〔亮點數字 2，如：2 個專案作品〕', '〔亮點數字 3，如：一段實習經驗〕'],
     ctaProjects: '瀏覽作品集',
     ctaAbout: '認識我',
@@ -24,8 +24,8 @@ export const zh = {
     intro: '〔自我介紹段落 — 待補：用 3–5 句話說明你是誰、關注什麼、擅長什麼〕',
     backgroundLabel: '求學背景',
     background: [
-      { period: '〔年份區間〕', school: '國立臺北商業大學', note: '五年制專科部（五專）' },
-      { period: '〔年份區間，現在就讀〕', school: '國立雲林科技大學', note: '二年制技術系班（二技）' },
+      { period: '2020-2025', school: '國立臺北商業大學', note: '五年制專科部（五專）' },
+      { period: '2025-現在', school: '國立雲林科技大學', note: '二年制技術系班（二技）' },
     ],
     whyTechLabel: '為什麼走資訊',
     whyTech: '〔為什麼走資訊這條路 — 待補〕',
@@ -90,15 +90,15 @@ export const zh = {
     certs: [{ name: '〔證照名稱〕', issuer: '〔發證單位〕', date: '〔取得日期〕' }],
     skillsLabel: '技能',
     skillCategoryLabels: {
-      languages: '語言',
+      frontend: '前端',
       backend: '後端',
       database: '資料庫',
       cloud: '雲端',
       tools: '工具',
     },
     skills: {
-      languages: ['〔語言〕'],
-      backend: ['〔後端技術〕'],
+      frontend: ['HTML', 'CSS', 'JavaScript', 'SCSS', 'React', 'Next.js'],
+      backend: ['Node.js', 'PHP', 'Python', 'Java'],
       database: ['〔資料庫〕'],
       cloud: ['〔雲端服務〕'],
       tools: ['〔工具〕'],

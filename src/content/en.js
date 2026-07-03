@@ -14,7 +14,7 @@ export const en = {
   home: {
     name: 'Liao Yi-Cheng',
     role: 'Undergraduate, National Yunlin University of Science and Technology',
-    tagline: '[One-line positioning statement — TBD]',
+    tagline: 'The programs we write are as spells fashioned from spirits out of our own minds.\n— "Structure and Interpretation of Computer Programs"',
     highlights: ['[Highlight 1, e.g. TOEIC 750]', '[Highlight 2, e.g. 2 projects]', '[Highlight 3, e.g. an internship]'],
     ctaProjects: 'View Projects',
     ctaAbout: 'About Me',

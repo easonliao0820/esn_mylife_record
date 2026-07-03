@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../../context/LanguageContext'
+import HeadImage from '../../assets/aboutme/myhead.jpg'
 import styles from './Home.module.scss'
 
 export default function Home() {
@@ -33,7 +34,9 @@ export default function Home() {
       </div>
 
       <div className={styles.photoCol}>
-        <div className={styles.photoFrame}>{lang === 'zh' ? '大頭照\n（4:5，待補）' : 'Portrait photo\n(4:5, TBD)'}</div>
+        <div className={styles.photoFrame}>
+          <img src={HeadImage} alt={home.name} className={styles.photoImg} />
+        </div>
       </div>
     </section>
   )
