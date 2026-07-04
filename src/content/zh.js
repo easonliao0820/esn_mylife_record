@@ -109,6 +109,24 @@ export const zh = {
     subtitle: '實習、競賽、專題、社團、志工、交換 — 這裡是拉開差距的地方。',
     items: [
       {
+        title: '〔全國大專校院資訊應用服務創新競賽 — 網頁應用組〕',
+        period: '〔2025 年〕',
+        description: '〔與隊友合作開發解決〔某個問題〕的網頁應用，負責前端介面與資料視覺化，最終獲得〔佳作／第 X 名〕〕',
+        photo: '/experience/competition-1.jpg',
+        documentHref: '/experience/competition-1.pdf',
+        documentLabel: '查看得獎證明',
+      },
+      {
+        title: '〔校內程式設計競賽〕',
+        period: '〔2024 年〕',
+        description: '〔在時限內完成〔題數〕道演算法題目，獲得〔名次／獎項〕〕',
+      },
+      {
+        title: '〔OO 黑客松 Hackathon〕',
+        period: '〔2024 年〕',
+        description: '〔48 小時內與團隊打造聚焦於〔主題〕的原型專案，榮獲〔獎項〕〕',
+      },
+      {
         title: '〔經驗標題，如：OO 公司實習〕',
         period: '〔時間區間〕',
         description: '〔你做了什麼 + 帶來什麼成果 — 待補〕',

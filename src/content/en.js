@@ -98,6 +98,24 @@ export const en = {
     title: 'Experience',
     subtitle: 'Internships, competitions, capstones, clubs, volunteering, exchange — this is where you stand out.',
     items: [
+      {
+        title: '[National Collegiate Information Application Innovation Contest — Web App Track]',
+        period: '[2025]',
+        description: '[Built a web app addressing [some problem] with a teammate, owned the front-end UI and data visualization, placed [honorable mention / Nth place]]',
+        photo: '/experience/competition-1.jpg',
+        documentHref: '/experience/competition-1.pdf',
+        documentLabel: 'View Award Certificate',
+      },
+      {
+        title: '[Intramural Programming Contest]',
+        period: '[2024]',
+        description: '[Solved [N] algorithm problems within the time limit, placed [rank / award]]',
+      },
+      {
+        title: '[OO Hackathon]',
+        period: '[2024]',
+        description: '[Built a prototype focused on [theme] with a team within 48 hours, won [award]]',
+      },
       { title: '[Experience title, e.g. Internship at OO]', period: '[Time range]', description: '[What you did + what it produced — TBD]' },
     ],
   },

@@ -42,3 +42,47 @@
   margin-top: $space-1;
   color: $color-ink-soft;
 }
+
+.itemMedia {
+  display: flex;
+  align-items: center;
+  gap: $space-3;
+  margin-top: $space-2;
+}
+
+.photo,
+.photoPlaceholder {
+  width: 9rem;
+  aspect-ratio: 3 / 2;
+  border-radius: $radius-md;
+  flex-shrink: 0;
+}
+
+.photo {
+  object-fit: cover;
+  border: 1px solid $color-border;
+}
+
+.photoPlaceholder {
+  border: 1px dashed $color-border;
+  background: $color-bg-alt;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: $space-1;
+  color: $color-ink-faint;
+  @include label-caps;
+}
+
+.documentLink {
+  @include label-caps;
+  text-decoration: underline;
+  text-decoration-color: $color-accent-soft;
+  text-underline-offset: 3px;
+  color: $color-ink-soft;
+
+  &:hover {
+    color: $color-accent;
+  }
+}
