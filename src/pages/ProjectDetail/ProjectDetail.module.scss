@@ -17,6 +17,39 @@
   }
 }
 
+.photoWrap {
+  @include page-shell;
+  padding-block: $space-2 $space-4;
+}
+
+.photo {
+  width: 100%;
+  max-width: $content-width-narrow;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: $radius-md;
+  border: 1px solid $color-border;
+  display: block;
+}
+
+.documentLinks {
+  display: flex;
+  flex-direction: column;
+  gap: $space-1;
+}
+
+.documentLink {
+  @include label-caps;
+  text-decoration: underline;
+  text-decoration-color: $color-accent-soft;
+  text-underline-offset: 3px;
+  color: $color-ink-soft;
+
+  &:hover {
+    color: $color-accent;
+  }
+}
+
 .diagramGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));

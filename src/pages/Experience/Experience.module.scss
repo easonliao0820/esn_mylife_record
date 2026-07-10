@@ -1,6 +1,45 @@
 @use '../../styles/variables' as *;
 @use '../../styles/mixins' as *;
 
+.filters {
+  @include page-shell;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: $space-3;
+}
+
+.filterBtn {
+  @include label-caps;
+  border: 1px solid $color-border;
+  background: transparent;
+  color: $color-ink-soft;
+  border-radius: $radius-sm;
+  padding: 0.4rem 0.85rem;
+  cursor: pointer;
+  transition:
+    border-color $duration-fast $ease-standard,
+    color $duration-fast $ease-standard,
+    background $duration-fast $ease-standard;
+
+  &:hover {
+    border-color: $color-accent;
+    color: $color-accent;
+  }
+}
+
+.filterBtnActive {
+  background: $color-ink;
+  border-color: $color-ink;
+  color: $color-bg;
+
+  &:hover {
+    background: $color-accent;
+    border-color: $color-accent;
+    color: $color-bg;
+  }
+}
+
 .list {
   @include page-shell;
   display: flex;
@@ -50,29 +89,19 @@
   margin-top: $space-2;
 }
 
-.photo,
-.photoPlaceholder {
+.photo {
   width: 9rem;
   aspect-ratio: 3 / 2;
   border-radius: $radius-md;
   flex-shrink: 0;
-}
-
-.photo {
   object-fit: cover;
   border: 1px solid $color-border;
 }
 
-.photoPlaceholder {
-  border: 1px dashed $color-border;
-  background: $color-bg-alt;
+.documentLinks {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: $space-1;
-  color: $color-ink-faint;
-  @include label-caps;
+  flex-direction: column;
+  gap: $space-1;
 }
 
 .documentLink {
