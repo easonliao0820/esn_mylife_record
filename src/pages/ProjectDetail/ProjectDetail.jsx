@@ -5,6 +5,10 @@ import Section from '../../components/Section/Section'
 import { useLanguage } from '../../context/LanguageContext'
 import styles from './ProjectDetail.module.scss'
 
+function isUrl(value) {
+  return typeof value === 'string' && /^https?:\/\//.test(value)
+}
+
 function ProjectPhoto({ src, alt, className }) {
   const [failed, setFailed] = useState(false)
 
@@ -34,6 +38,8 @@ export default function ProjectDetail() {
 
   const fallback = projectDetail.fallback
   const detail = { ...fallback, ...project }
+  const githubUrl = isUrl(detail.github) ? detail.github : null
+  const websiteUrl = isUrl(detail.demo) ? detail.demo : null
 
   return (
     <>
@@ -44,22 +50,6 @@ export default function ProjectDetail() {
       </div>
 
       <PageHeader eyebrow={project.tags.join(' · ')} title={project.name} subtitle={project.summary} />
-
-      {project.photo && (
-        <div className={styles.photoWrap}>
-          <ProjectPhoto src={project.photo} alt={project.name} />
-        </div>
-      )}
-
-      {project.photos?.length > 0 && (
-        <div className={styles.galleryWrap}>
-          <div className={styles.galleryGrid}>
-            {project.photos.map((src) => (
-              <ProjectPhoto key={src} src={src} alt={project.name} className={styles.galleryPhoto} />
-            ))}
-          </div>
-        </div>
-      )}
 
       <Section label={projectDetail.motivationLabel}>
         <p>{detail.motivation}</p>
@@ -82,21 +72,40 @@ export default function ProjectDetail() {
       </Section>
 
       <Section label={projectDetail.diagramsLabel}>
-        <div className={styles.diagramGrid}>
-          {detail.diagrams.map((diagram) => (
-            <div key={diagram} className={styles.diagramCard}>
-              {diagram}
-            </div>
-          ))}
-        </div>
+        {project.photo || project.photos?.length > 0 ? (
+          <div className={styles.galleryGrid}>
+            {project.photo && <ProjectPhoto src={project.photo} alt={project.name} className={styles.galleryPhoto} />}
+            {project.photos?.map((src) => (
+              <ProjectPhoto key={src} src={src} alt={project.name} className={styles.galleryPhoto} />
+            ))}
+          </div>
+        ) : (
+          <div className={styles.diagramGrid}>
+            {detail.diagrams.map((diagram) => (
+              <div key={diagram} className={styles.diagramCard}>
+                {diagram}
+              </div>
+            ))}
+          </div>
+        )}
       </Section>
 
-      <Section label={projectDetail.linksLabel}>
-        <div className={styles.linkRow}>
-          <span className={styles.linkItem}>GitHub · {detail.github}</span>
-          <span className={styles.linkItem}>Demo · {detail.demo}</span>
-        </div>
-      </Section>
+      {(githubUrl || websiteUrl) && (
+        <Section label={projectDetail.linksLabel}>
+          <div className={styles.linkRow}>
+            {githubUrl && (
+              <a href={githubUrl} target="_blank" rel="noreferrer" className={styles.linkItem}>
+                {projectDetail.githubLabel}
+              </a>
+            )}
+            {websiteUrl && (
+              <a href={websiteUrl} target="_blank" rel="noreferrer" className={styles.linkItem}>
+                {projectDetail.websiteLabel}
+              </a>
+            )}
+          </div>
+        </Section>
+      )}
 
       {project.documents?.length > 0 && (
         <Section label={projectDetail.documentsLabel}>

@@ -17,11 +17,6 @@
   }
 }
 
-.photoWrap {
-  @include page-shell;
-  padding-block: $space-2 $space-4;
-}
-
 .photo {
   width: 100%;
   max-width: $content-width-narrow;
@@ -30,11 +25,6 @@
   border-radius: $radius-md;
   border: 1px solid $color-border;
   display: block;
-}
-
-.galleryWrap {
-  @include page-shell;
-  padding-block: 0 $space-4;
 }
 
 .galleryGrid {
@@ -100,6 +90,14 @@
 
 .linkItem {
   @include label-caps;
+  text-decoration: underline;
+  text-decoration-color: $color-accent-soft;
+  text-underline-offset: 3px;
+  color: $color-ink-soft;
+
+  &:hover {
+    color: $color-accent;
+  }
 }
 
 .notFound {
