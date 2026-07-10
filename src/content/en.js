@@ -15,7 +15,11 @@ export const en = {
     name: 'Liao Yi-Cheng',
     role: 'Undergraduate, National Yunlin University of Science and Technology',
     tagline: 'The programs we write are as spells fashioned from spirits out of our own minds.\n— "Structure and Interpretation of Computer Programs"',
-    highlights: ['[Highlight 1, e.g. TOEIC 750]', '[Highlight 2, e.g. 2 projects]', '[Highlight 3, e.g. an internship]'],
+    highlights: [
+      'Selected for "Journey with Microsoft" – 2026 Taiwan Microsoft Corporate Visit',
+      '5 live portfolio projects',
+      'GPA 3.82 (National Yunlin University of Science and Technology)',
+    ],
     ctaProjects: 'View Projects',
     ctaAbout: 'About Me',
   },
