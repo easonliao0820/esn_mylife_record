@@ -5,14 +5,14 @@ import Section from '../../components/Section/Section'
 import { useLanguage } from '../../context/LanguageContext'
 import styles from './ProjectDetail.module.scss'
 
-function ProjectPhoto({ src, alt }) {
+function ProjectPhoto({ src, alt, className }) {
   const [failed, setFailed] = useState(false)
 
   if (failed) {
     return null
   }
 
-  return <img src={src} alt={alt} className={styles.photo} onError={() => setFailed(true)} />
+  return <img src={src} alt={alt} className={className || styles.photo} onError={() => setFailed(true)} />
 }
 
 export default function ProjectDetail() {
@@ -48,6 +48,16 @@ export default function ProjectDetail() {
       {project.photo && (
         <div className={styles.photoWrap}>
           <ProjectPhoto src={project.photo} alt={project.name} />
+        </div>
+      )}
+
+      {project.photos?.length > 0 && (
+        <div className={styles.galleryWrap}>
+          <div className={styles.galleryGrid}>
+            {project.photos.map((src) => (
+              <ProjectPhoto key={src} src={src} alt={project.name} className={styles.galleryPhoto} />
+            ))}
+          </div>
         </div>
       )}
 

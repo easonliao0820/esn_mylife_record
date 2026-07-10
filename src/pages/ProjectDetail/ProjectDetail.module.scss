@@ -32,6 +32,27 @@
   display: block;
 }
 
+.galleryWrap {
+  @include page-shell;
+  padding-block: 0 $space-4;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: $space-2;
+  max-width: $content-width-narrow;
+}
+
+.galleryPhoto {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: $radius-md;
+  border: 1px solid $color-border;
+  display: block;
+}
+
 .documentLinks {
   display: flex;
   flex-direction: column;

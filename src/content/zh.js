@@ -60,11 +60,24 @@ export const zh = {
         result: '入圍決賽，最終獲得佳作。',
         demo: '〔Demo 連結 — 待補〕',
         github: '〔GitHub 連結 — 待補〕',
-        photo: '/experience/2024-national-innovation/photo.png',
+        photo: '/projects/lvren/photo.png',
         documents: [
-          { href: '/experience/2024-national-innovation/certificate-of-selection.png', label: '查看入選證明' },
-          { href: '/experience/2024-national-innovation/certificate-of-merit.png', label: '查看佳作獎狀' },
+          { href: '/projects/lvren/certificate-of-selection.png', label: '查看入選證明' },
+          { href: '/projects/lvren/certificate-of-merit.png', label: '查看佳作獎狀' },
         ],
+      },
+      {
+        id: 'ntub-birc-website',
+        name: '商業智慧研究中心官方網站',
+        summary: '商業智慧研究中心的對外官方網站，負責前端頁面開發。',
+        tags: ['HTML', 'SCSS', 'React', 'ESLint'],
+        motivation: '實用人才拔尖計畫（商業智慧研究中心）培育專案之一，作為中心對外介紹單位、成員與各專案成果的官方網站。',
+        approach: '以 HTML、SCSS、React 打造前端介面，並用 ESLint 檢查程式碼品質。',
+        role: '負責前端頁面開發。',
+        result: '網站已上線，供大眾了解商業智慧研究中心相關資訊。',
+        demo: 'https://www.ntubimdbirc.tw/',
+        github: '（校內專案，無公開原始碼）',
+        photo: '/projects/ntub-birc-website/photo.png',
       },
       {
         id: 'ntub-smart-key-cabinet',
@@ -77,6 +90,8 @@ export const zh = {
         result: '系統已上線，供校內使用中。',
         demo: 'https://keycabinet.ntubimdbirc.tw/',
         github: '（校內專案，無公開原始碼）',
+        photo: '/projects/ntub-smart-key-cabinet/key.png',
+        photos: ['/projects/ntub-smart-key-cabinet/key1.png'],
       },
       {
         id: 'ntub-tactl-website',
@@ -101,6 +116,8 @@ export const zh = {
         result: '網站已上線，供教學助理與教師查閱使用。',
         demo: 'https://tactl.ntub.edu.tw/landing',
         github: '（校內專案，無公開原始碼）',
+        photo: '/projects/ntub-ta-portal/ta.png',
+        photos: ['/projects/ntub-ta-portal/ta1.png'],
       },
       {
         id: 'ils-smart-living-space',
@@ -113,6 +130,7 @@ export const zh = {
         result: '網站已上線，供大眾了解智慧化居住空間相關資訊。',
         demo: 'https://www.ils.org.tw/',
         github: '（校內專案，無公開原始碼）',
+        photo: '/projects/ils-smart-living-space/iot.png',
       },
     ],
   },
@@ -142,9 +160,25 @@ export const zh = {
     timelineLabel: '學歷',
     statsLabel: '在校成績',
     gpaLabel: 'GPA / 百分制',
-    gpa: '〔GPA / 百分制成績 — 待補〕',
     rankLabel: '班排 / 系排',
-    rank: '〔班排 / 系排 — 待補〕',
+    records: [
+      {
+        school: '國立臺北商業大學（五專資訊管理科）',
+        period: '2020–2025',
+        gpa: '82.79 分',
+        gpaDetail: '學業成績總平均逐年提升：76.68 → 74.05 → 80.25 → 81.46 → 82.79（五專一至五年級，五年級為上學期成績）',
+        rank: '系排 22 / 47',
+        rankDetail: '113學年度第1學期，累計學分 232.0，操行 A+',
+      },
+      {
+        school: '國立雲林科技大學（資訊管理系 二年制技術系班）',
+        period: '2025–現在',
+        gpa: '85.34 分／GPA 3.82',
+        gpaDetail: '114學年度第1–2學期累計百分制平均與 GPA',
+        rank: '24 / 52',
+        rankDetail: '114學年度第2學期',
+      },
+    ],
     coursesLabel: '相關修課',
     courses: '〔相關修課列表 — 待補〕',
     awardsLabel: '獎學金與書卷獎',
@@ -180,8 +214,22 @@ export const zh = {
       teaching: '教學',
       leadership: '幹部',
       internship: '實習',
+      activity: '活動／參訪',
     },
     items: [
+      {
+        title: '「微你同行－2026 台灣微軟企業參訪之旅」錄取',
+        category: 'activity',
+        period: '2026年3月',
+        description:
+          '獲選參加「微你同行－2026 台灣微軟企業參訪之旅」，前往台灣微軟信義辦公室進行企業參訪，透過講座與交流深入了解企業文化與職涯發展，並於競賽環節使用 Microsoft Copilot 完成任務。',
+        photo: '/experience/2026-microsoft-visit/photo.jpeg',
+        photos: [
+          '/experience/2026-microsoft-visit/action.jpeg',
+          '/experience/2026-microsoft-visit/action-1.jpeg',
+          '/experience/2026-microsoft-visit/action-2.jpeg',
+        ],
+      },
       {
         title: '112資訊月資訊應用技能競賽（數位內容軟體應用大賽）— 程式語言 Python 組',
         category: 'competition',
@@ -229,7 +277,33 @@ export const zh = {
         category: 'teaching',
         period: '〔待補：參與學年/學期〕',
         description:
-          '參與商業智慧研究中心的實務培育計畫，負責前端開發與教學。於 16 週全端體驗營中，在中心助理工程師帶領下指導校內外學員以 HTML、CSS、React 從零架設網頁；並於中心新生招募與傳承中，擔任學弟妹的前端教學與指導。期間參與的專案作品請見「作品集」頁（部分畫面／網址因內部網域或保密考量未列出）。',
+          '參與商業智慧研究中心的實務培育計畫，負責前端開發與教學。期間參與的專案作品請見「作品集」頁（部分畫面／網址因內部網域或保密考量未列出）。',
+        documents: [{ href: 'https://www.ntubimdbirc.tw/', label: '商業智慧研究中心官網' }],
+      },
+      {
+        title: '中心新生招募與傳承教學',
+        category: 'teaching',
+        period: '〔待補：參與學年/學期〕',
+        description:
+          '中心每年都會招募新生加入中心，為了讓新生更快加入專案生產，會由學長姊教導學弟妹。我在其中負責前端相關的教學與指導學弟妹。',
+        photo: '/experience/birc-recruitment-mentorship/find.jpg',
+        photos: [
+          '/experience/birc-recruitment-mentorship/find1.jpg',
+          '/experience/birc-recruitment-mentorship/find2.jpg',
+        ],
+        documents: [{ href: 'https://www.ntubimdbirc.tw/', label: '商業智慧研究中心官網' }],
+      },
+      {
+        title: '16週全端體驗營',
+        category: 'teaching',
+        period: '〔待補：參與學年/學期〕',
+        description:
+          '由商業智慧研究中心舉辦為期 16 週的全端體驗營，開放校內外人士報名參加，由中心助理工程師帶領學員從 0 到 100 架設一個網頁。我在其中負責前端，帶領學生以 HTML、CSS、React 撰寫出網頁。',
+        photo: '/experience/birc-fullstack-bootcamp/photo.png',
+        photos: [
+          '/experience/birc-fullstack-bootcamp/photo1.png',
+          '/experience/birc-fullstack-bootcamp/photo2.png',
+        ],
         documents: [{ href: 'https://www.ntubimdbirc.tw/', label: '商業智慧研究中心官網' }],
       },
       {
@@ -237,6 +311,14 @@ export const zh = {
         category: 'teaching',
         period: '2024年1月（1/22、1/29）',
         description: '於 MVP 養成營帶領教學活動，與國小／國中學童進行程式與語音相關的互動教學。',
+        photo: '/experience/2024-mvp-bootcamp/mvp.jpg',
+        photos: [
+          '/experience/2024-mvp-bootcamp/mvp1.jpg',
+          '/experience/2024-mvp-bootcamp/mvp2.jpg',
+          '/experience/2024-mvp-bootcamp/mvp3.jpg',
+          '/experience/2024-mvp-bootcamp/mvp4.jpg',
+          '/experience/2024-mvp-bootcamp/mvp5.jpg',
+        ],
         documents: [{ href: 'https://www.learnnest.com.tw/', label: '養成營官網' }],
       },
       {
@@ -245,6 +327,7 @@ export const zh = {
         period: '113學年度第1學期（2024年9月–2025年1月）',
         description:
           '擔任國立臺北商業大學專科部五專資訊管理科 113 學年度第1學期班代，經學務處生輔組核發幹部證明（證明字號：北商大學(生)字第11400505號，中華民國114年3月20日核發）。',
+        documents: [{ href: '/experience/2024-class-representative/t.jpg', label: '查看幹部證明' }],
       },
       {
         title: '〔經驗標題，如：OO 公司實習〕',

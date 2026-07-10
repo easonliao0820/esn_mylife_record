@@ -85,6 +85,7 @@
 .itemMedia {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: $space-3;
   margin-top: $space-2;
 }

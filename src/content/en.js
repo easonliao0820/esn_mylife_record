@@ -50,11 +50,25 @@ export const en = {
         result: 'Advanced to the finals and received an Honorable Mention.',
         demo: '[Demo link — TBD]',
         github: '[GitHub link — TBD]',
-        photo: '/experience/2024-national-innovation/photo.png',
+        photo: '/projects/lvren/photo.png',
         documents: [
-          { href: '/experience/2024-national-innovation/certificate-of-selection.png', label: 'View Selection Certificate' },
-          { href: '/experience/2024-national-innovation/certificate-of-merit.png', label: 'View Merit Certificate' },
+          { href: '/projects/lvren/certificate-of-selection.png', label: 'View Selection Certificate' },
+          { href: '/projects/lvren/certificate-of-merit.png', label: 'View Merit Certificate' },
         ],
+      },
+      {
+        id: 'ntub-birc-website',
+        name: 'Business Intelligence Research Center Website',
+        summary: "The Business Intelligence Research Center's official public website; responsible for front-end development.",
+        tags: ['HTML', 'SCSS', 'React', 'ESLint'],
+        motivation:
+          "One of the Practical Talent Excellence Program (Business Intelligence Research Center) projects — the center's official website introducing the unit, its members, and project outcomes to the public.",
+        approach: 'Built the front end with HTML, SCSS, and React, using ESLint to check code quality.',
+        role: 'Responsible for front-end development.',
+        result: 'The website is live, giving the public information about the Business Intelligence Research Center.',
+        demo: 'https://www.ntubimdbirc.tw/',
+        github: '(Internal school project, source not public)',
+        photo: '/projects/ntub-birc-website/photo.png',
       },
       {
         id: 'ntub-smart-key-cabinet',
@@ -67,6 +81,8 @@ export const en = {
         result: 'The system is live and in active use on campus.',
         demo: 'https://keycabinet.ntubimdbirc.tw/',
         github: '(Internal project, no public repository)',
+        photo: '/projects/ntub-smart-key-cabinet/key.png',
+        photos: ['/projects/ntub-smart-key-cabinet/key1.png'],
       },
       {
         id: 'ntub-tactl-website',
@@ -91,6 +107,8 @@ export const en = {
         result: 'The site is live and used by teaching assistants and instructors.',
         demo: 'https://tactl.ntub.edu.tw/landing',
         github: '(Internal project, no public repository)',
+        photo: '/projects/ntub-ta-portal/ta.png',
+        photos: ['/projects/ntub-ta-portal/ta1.png'],
       },
       {
         id: 'ils-smart-living-space',
@@ -103,6 +121,7 @@ export const en = {
         result: 'The site is live, helping the public learn about the Smart Living Space initiative.',
         demo: 'https://www.ils.org.tw/',
         github: '(Internal project, no public repository)',
+        photo: '/projects/ils-smart-living-space/iot.png',
       },
     ],
   },
@@ -132,9 +151,25 @@ export const en = {
     timelineLabel: 'Timeline',
     statsLabel: 'Academic Record',
     gpaLabel: 'GPA / Percentile',
-    gpa: '[GPA / percentile score — TBD]',
     rankLabel: 'Class / Department Rank',
-    rank: '[Class / department rank — TBD]',
+    records: [
+      {
+        school: 'National Taipei University of Business (5-Year Junior College, Dept. of Information Management)',
+        period: '2020–2025',
+        gpa: '82.79',
+        gpaDetail: 'Overall percentile average improved year over year: 76.68 → 74.05 → 80.25 → 81.46 → 82.79 (Years 1–5; Year 5 figure is Semester 1 only)',
+        rank: 'Dept. rank 22 / 47',
+        rankDetail: 'Semester 1, 113 academic year; cumulative credits 232.0; conduct grade A+',
+      },
+      {
+        school: 'National Yunlin University of Science and Technology (Dept. of Information Management, 2-Year Technical Program)',
+        period: '2025–Present',
+        gpa: '85.34 / GPA 3.82',
+        gpaDetail: 'Cumulative percentile average and GPA, 114 academic year, Semesters 1–2',
+        rank: '24 / 52',
+        rankDetail: 'Semester 2, 114 academic year',
+      },
+    ],
     coursesLabel: 'Relevant Coursework',
     courses: '[Relevant coursework — TBD]',
     awardsLabel: 'Scholarships & Honors',
@@ -170,8 +205,22 @@ export const en = {
       teaching: 'Teaching',
       leadership: 'Leadership',
       internship: 'Internship',
+      activity: 'Activities & Visits',
     },
     items: [
+      {
+        title: 'Selected for "Journey with Microsoft" – 2026 Taiwan Microsoft Corporate Visit',
+        category: 'activity',
+        period: 'Mar 2026',
+        description:
+          'Selected for "Journey with Microsoft – 2026 Taiwan Microsoft Corporate Visit," a company visit at Microsoft Taiwan\'s Xinyi office featuring talks and networking on corporate culture and career development, plus a hands-on task using Microsoft Copilot during the competition segment.',
+        photo: '/experience/2026-microsoft-visit/photo.jpeg',
+        photos: [
+          '/experience/2026-microsoft-visit/action.jpeg',
+          '/experience/2026-microsoft-visit/action-1.jpeg',
+          '/experience/2026-microsoft-visit/action-2.jpeg',
+        ],
+      },
       {
         title: '2023 Information Month Information Application Skills Competition (Digital Content & Software Application Contest) — Python Track',
         category: 'competition',
@@ -219,7 +268,33 @@ export const en = {
         category: 'teaching',
         period: '[TBD: academic year/semester attended]',
         description:
-          'Took part in the Business Intelligence Research Center\'s hands-on training program as a front-end developer and instructor. In a 16-week full-stack bootcamp, guided by the center\'s assistant engineer, taught fellow participants (open to students and outsiders) to build web pages from scratch with HTML, CSS, and React. Also mentored incoming students on the front end as part of the center\'s recruiting and knowledge-transfer program. Projects built during this program are listed on the Projects page (some screens/URLs are withheld due to internal domains or confidentiality).',
+          "Took part in the Business Intelligence Research Center's hands-on training program as a front-end developer and instructor. Projects built during this program are listed on the Projects page (some screens/URLs are withheld due to internal domains or confidentiality).",
+        documents: [{ href: 'https://www.ntubimdbirc.tw/', label: 'Business Intelligence Research Center' }],
+      },
+      {
+        title: 'Center Recruiting & Mentorship Teaching',
+        category: 'teaching',
+        period: '[TBD: academic year/semester attended]',
+        description:
+          "The center recruits new members every year, and to help newcomers get up to speed on project work faster, senior members mentor the incoming students. I was responsible for front-end teaching and mentoring the incoming students.",
+        photo: '/experience/birc-recruitment-mentorship/find.jpg',
+        photos: [
+          '/experience/birc-recruitment-mentorship/find1.jpg',
+          '/experience/birc-recruitment-mentorship/find2.jpg',
+        ],
+        documents: [{ href: 'https://www.ntubimdbirc.tw/', label: 'Business Intelligence Research Center' }],
+      },
+      {
+        title: '16-Week Full-Stack Bootcamp',
+        category: 'teaching',
+        period: '[TBD: academic year/semester attended]',
+        description:
+          "A 16-week full-stack bootcamp run by the Business Intelligence Research Center, open to both students and outsiders, where the center's assistant engineer guided participants through building a web page from scratch. I was responsible for the front end, teaching students to build web pages with HTML, CSS, and React.",
+        photo: '/experience/birc-fullstack-bootcamp/photo.png',
+        photos: [
+          '/experience/birc-fullstack-bootcamp/photo1.png',
+          '/experience/birc-fullstack-bootcamp/photo2.png',
+        ],
         documents: [{ href: 'https://www.ntubimdbirc.tw/', label: 'Business Intelligence Research Center' }],
       },
       {
@@ -227,6 +302,14 @@ export const en = {
         category: 'teaching',
         period: 'Jan 2024 (1/22, 1/29)',
         description: 'Led teaching activities at the MVP Bootcamp, running interactive programming/voice-related sessions for elementary and middle school students.',
+        photo: '/experience/2024-mvp-bootcamp/mvp.jpg',
+        photos: [
+          '/experience/2024-mvp-bootcamp/mvp1.jpg',
+          '/experience/2024-mvp-bootcamp/mvp2.jpg',
+          '/experience/2024-mvp-bootcamp/mvp3.jpg',
+          '/experience/2024-mvp-bootcamp/mvp4.jpg',
+          '/experience/2024-mvp-bootcamp/mvp5.jpg',
+        ],
         documents: [{ href: 'https://www.learnnest.com.tw/', label: 'Bootcamp Website' }],
       },
       {
@@ -235,6 +318,7 @@ export const en = {
         period: 'Fall 2024 (Sep 2024–Jan 2025)',
         description:
           'Served as class representative for the Department of Information Management, Five-Year Junior College Division, National Taipei University of Business, Fall Semester of the 113 academic year. Certificate issued by the Student Affairs Office, Student Guidance Section (Certificate No. 北商大學(生)字第11400505號, issued March 20, 2025).',
+        documents: [{ href: '/experience/2024-class-representative/t.jpg', label: 'View Officer Certificate' }],
       },
       {
         title: '[Experience title, e.g. Internship at OO]',

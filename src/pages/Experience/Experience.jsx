@@ -59,9 +59,12 @@ export default function Experience() {
             </div>
             <p className={styles.itemDesc}>{item.description}</p>
 
-            {(item.photo || item.documents?.length > 0) && (
+            {(item.photo || item.photos?.length > 0 || item.documents?.length > 0) && (
               <div className={styles.itemMedia}>
                 {item.photo && <ExperiencePhoto src={item.photo} alt={item.title} />}
+                {item.photos?.map((src) => (
+                  <ExperiencePhoto key={src} src={src} alt={item.title} />
+                ))}
                 {item.documents?.length > 0 && (
                   <div className={styles.documentLinks}>
                     {item.documents.map((doc) => (

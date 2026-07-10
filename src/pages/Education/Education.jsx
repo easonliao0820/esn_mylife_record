@@ -17,16 +17,26 @@ export default function Education() {
       </Section>
 
       <Section label={education.statsLabel}>
-        <div className={styles.statGrid}>
-          <div>
-            <span className={styles.statLabel}>{education.gpaLabel}</span>
-            <div className={styles.statValue}>{education.gpa}</div>
+        {education.records.map((record) => (
+          <div key={record.school} className={styles.recordBlock}>
+            <div className={styles.recordHead}>
+              <span className={styles.recordSchool}>{record.school}</span>
+              <span className={styles.recordPeriod}>{record.period}</span>
+            </div>
+            <div className={styles.statGrid}>
+              <div>
+                <span className={styles.statLabel}>{education.gpaLabel}</span>
+                <div className={styles.statValue}>{record.gpa}</div>
+                <p className={styles.statDetail}>{record.gpaDetail}</p>
+              </div>
+              <div>
+                <span className={styles.statLabel}>{education.rankLabel}</span>
+                <div className={styles.statValue}>{record.rank}</div>
+                <p className={styles.statDetail}>{record.rankDetail}</p>
+              </div>
+            </div>
           </div>
-          <div>
-            <span className={styles.statLabel}>{education.rankLabel}</span>
-            <div className={styles.statValue}>{education.rank}</div>
-          </div>
-        </div>
+        ))}
       </Section>
 
       <Section label={education.coursesLabel}>

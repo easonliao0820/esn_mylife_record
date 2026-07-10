@@ -1,11 +1,46 @@
 @use '../../styles/variables' as *;
 @use '../../styles/mixins' as *;
 
+.recordBlock {
+  max-width: $content-width-narrow;
+  padding: $space-3;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  background: $color-bg-alt;
+  margin-bottom: $space-3;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.recordHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: $space-2;
+  flex-wrap: wrap;
+  margin-bottom: $space-3;
+  padding-bottom: $space-2;
+  border-bottom: 1px solid $color-border;
+}
+
+.recordSchool {
+  font-family: $font-heading;
+  font-size: 1.05rem;
+  color: $color-ink;
+}
+
+.recordPeriod {
+  @include label-caps;
+  color: $color-ink-faint;
+  white-space: nowrap;
+}
+
 .statGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-  gap: $space-3;
-  max-width: $content-width-narrow;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: $space-3 $space-4;
 }
 
 .statLabel {
@@ -16,8 +51,15 @@
 
 .statValue {
   font-family: $font-heading;
-  font-size: 1.15rem;
+  font-size: 1.4rem;
   color: $color-ink;
+}
+
+.statDetail {
+  margin-top: 0.35rem;
+  font-size: $fs-small;
+  color: $color-ink-soft;
+  line-height: 1.5;
 }
 
 .privacyNote {
